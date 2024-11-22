@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Cedarville+Cursive&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body class="m-color">
+    <div class="container">
+      <div class="item text-center mt-5">
+        <div class="nono position-relative">
+          <div class="layer"></div>
+          <h1>Bookmarker</h1>
+        </div>
+
+        <div class="line w-100 my-5"></div>
+        <div
+          class="item2 text-center d-flex justify-content-center align-items-center gap-2"
+        >
+          <i class="fa-solid fa-bookmark"></i>
+          <h2 class="fw-bold m">Bookmark your favorite sites</h2>
+          <i class="fa-solid fa-bookmark"></i>
+        </div>
+
+        <div class="mb-3 my-5">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label d-flex fw-bold"
+          >
+            <i class="p-1 fa-solid fa-floppy-disk"></i>Site Name</label
+          >
+          <input
+          oninput="vaildationinputs(this)"
+            type="text"
+            class="form-control "
+            id="input1"
+            placeholder="Bookmark name"
+          />
+        </div>
+        <div class="mb-3 my-3">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label d-flex fw-bold "
+          >
+            <i class="p-1 fa-solid fa-paperclip"></i>Site URL</label
+          >
+          <input
+          oninput="vaildationinputs(this)"
+            type="text"
+            class="form-control "
+            id="input2"
+            placeholder="Bookmark name"
+          />
+        </div>
+        <button 
+        id="btnn"
+          onclick="addProduct()"
+          type="button"
+          class="soso btn-lg"
+        >
+          Submit
+        </button>
+      </div>
+      <div class=" w-100 my-5"></div>
+
+      <div class="container bg-white rounded-1">
+        <div class="row ">
+          <div class="col-lg-3 ">
+            <div class="item3 text-center p-2 ">
+              <h2 class="h6 fw-bold">index</h2>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="item3 text-center p-2 ">
+              <h2 class="h6 fw-bold">website name</h2>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="item3 text-center p-2 ">
+              <h2 class="h6 fw-bold">Visit</h2>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="item3 text-center p-2 ">
+              <h2 class="h6 fw-bold">Delete</h2>
+            </div>
+          </div>
+        </div>
+        <div id="demo" class="row g-2 align-items-center ">
+        
+        </div>
+      </div>
+
+     
+    </div>
+
+
+
+    <div class="parent d-flex justify-content-center align-items-center vh-100 d-none">
+      <div class="momo w-50 bg-light p-3">
+
+        <div class="d-flex justify-content-between align-content-center mb-3">
+          <div>
+            <i class="fa-solid fa-circle" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-circle" style="color: #ec0404;"></i>
+            <i class="fa-solid fa-circle" style="color: #1c7c09;"></i>
+          </div>
+          <i id="exit" class="p-1 fa-solid fa-xmark" style="cursor: pointer;"></i>
+        </div>
+    
+        
+        <h2 class="h4">Site Name or Url is not valid, Please follow the rules below:</h2>
+        <div class="d-flex align-items-center" style="gap: 0.5rem;">
+          <i class="fa-regular fa-circle-xmark" style="color: #d80303; font-size: 1.2rem;"></i>
+          <p style="margin: 0;">Site name must contain at least 3 characters</p>
+        </div>
+        <div class="d-flex align-items-center" style="gap: 0.5rem;">
+          <i class="fa-regular fa-circle-xmark" style="color: #d80303; font-size: 1.2rem;"></i>
+          <p style="margin: 0;">Site URL must be a valid one</p>
+        </div>
+      </div>
+    </div>
+   
+
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
